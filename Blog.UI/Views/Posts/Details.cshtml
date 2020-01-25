@@ -1,0 +1,72 @@
+﻿@model Blog.DAL.Entity.ORM.Entity.Concrete.Post
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h4>@Model.Header</h4>
+<hr />
+
+<p> <span class="glyphicon glyphicon-time">@Model.AddDate</span></p>
+
+<hr />
+
+<img src="~/Content/İmg/@Model.Picture" />
+
+<hr />
+
+<blockquote>
+
+    <p>@Model.Content</p>
+
+
+</blockquote>
+
+<div class="comment">
+
+    <div class="well">
+
+
+        <h4>Yorum Yap</h4>
+
+        <form role="form">
+            <div class="form-group">
+
+
+                <textarea class="form-control" rows="3"></textarea>
+
+            </div>
+
+            <button type="button" class="btn btn-primary">Yorum Yap</button>
+
+        </form>
+
+
+    </div>
+
+    <div class="media">
+        <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+        <div class="media-body">
+            <h5 class="mt-0">Media heading</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+    </div>
+
+    <div class="media">
+        <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+        <div class="media-body">
+            <h5 class="mt-0">Media heading</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+

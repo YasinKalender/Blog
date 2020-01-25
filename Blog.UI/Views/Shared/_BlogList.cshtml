@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Blog.UI.Models.DTO.PostDTO>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+        @if (Model.Count() == 0)
+        {
+            <div class="alert-warning">Kayıt bulunamadı</div>
+        }
+
+        else
+        {
+            foreach (var item in Model)
+            {
+
+
+                <h3 class="page-header">@item.Header</h3>
+
+                <p><span class="glyphicon glyphicon-time">@item.AddDate</span></p>
+
+
+
+                <img class="w-25 img-responsive mr-auto ml-auto" src="~/Content/İmg/1453224503.png" />
+
+                if (item.Content.Length > 100)
+                {
+                    <p>@item.Content.Substring(0, 100)+...</p>
+                }
+
+                else
+                {
+                    <p>@item.Content</p>
+                }
+
+
+
+                @Html.ActionLink("Details", "Details", "Posts", new { id = @item.ID })
+
+
+
+            }
+        }
+ 

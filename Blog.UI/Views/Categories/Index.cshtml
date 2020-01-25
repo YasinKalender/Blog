@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Blog.DAL.Entity.ORM.Entity.Concrete.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+@if (TempData["Category"]!=null)
+{
+    var category = (Blog.DAL.Entity.ORM.Entity.Concrete.Category)TempData["Category"];
+
+    <div class="alert alert-success">@category.CategoryName kayıt edildi</div>
+}
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeleteDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+
+        <th>@Html.DisplayNameFor(model => model.Posts)</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeleteDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+
+        <td>@ViewBag.Count</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID },new { @class="btn btn-primary btn-xs"}) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID },new { @class="btn btn-warning btn-xs"}) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID },new { @class="btn btn-danger btn-xs"})
+        </td>
+    </tr>
+}
+
+</table>

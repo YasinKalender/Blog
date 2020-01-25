@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Blog.UI.Models.DTO.PostDTO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>BLOG PAGE</h2>
+
+<div class="row">
+
+
+
+    @Html.Partial("_BlogList", Model)
+
+    @section SagKolon{
+
+
+
+        @Html.Partial("_Search")
+        @{Html.RenderAction("CategoriesList", "Categories");}
+
+    }
+
+
+
+
+
+
+</div>
+
+
