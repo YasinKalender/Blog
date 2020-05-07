@@ -3,11 +3,7 @@
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
-* text=auto
-*.pl linguist-detectable=false
-*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.htm inguist-detectable=false
+
 
 
 ###############################################################################
