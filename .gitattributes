@@ -1,7 +1,4 @@
-*.pl linguist-detectable=false
-*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.htm inguist-detectable=false
+
 
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
